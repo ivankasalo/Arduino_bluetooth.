@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Arduino_bluetooth</string>
+    <string name="receive_message">receive_message</string>
+    <string name="line">follow the line</string>
+</resources>

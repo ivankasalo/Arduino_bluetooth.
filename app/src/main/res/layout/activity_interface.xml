@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    android:id="@+id/free"
+    android:background="#00000000"
+    android:orientation="vertical">
+    <!-- this will prevent the smartphone screen to turn off and the app to go on pause -->
+    <!-- opening another app will kill the connection, though -->
+    >
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:text="Connection"
+            android:id="@+id/connect"
+            android:textSize="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+        </Button>
+        <Button
+            android:text="Disconnect"
+            android:id="@+id/deconnect"
+            android:textSize="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+        </Button>
+        <TextView
+            android:text=""
+            android:id="@+id/logview"
+            android:textSize="14dp"
+            android:bufferType="editable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </TextView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative">
+
+        <ImageView
+            android:id="@+id/forward_arrow"
+            android:src="@drawable/forward_arrow"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:src="@drawable/back_arrow"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/right_arrow"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/right_arrow"
+            android:src="@drawable/right_arrow"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/left_arrow"
+            android:layout_toRightOf="@+id/forward_arrow"
+            android:layout_toEndOf="@+id/forward_arrow" />
+        <ImageView
+            android:id="@+id/left_arrow"
+            android:src="@drawable/left_arrow"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/forward_arrow"
+            android:layout_toLeftOf="@+id/forward_arrow"
+            android:layout_toStartOf="@+id/forward_arrow" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/receive_message"
+            android:id="@+id/logview2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:bufferType="editable"
+            android:editable="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/line"
+            android:id="@+id/line"
+            android:layout_alignBottom="@+id/logview2"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>
